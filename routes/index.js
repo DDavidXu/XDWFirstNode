@@ -9,4 +9,6 @@ module.exports = function (app) {
 		res.redirect('error');
 	});
 	app.use('/register', require('./register'));	
+	app.use('/login', require('./login'));
+
 };

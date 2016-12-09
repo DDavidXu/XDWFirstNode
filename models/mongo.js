@@ -86,6 +86,13 @@
 			callback(err, userOne);
 		})
 	}
+	//根据手机号查找用户信息
+	var queryUserByPhoneNum = function (phoneNumber, callback) {
+		UserModel.findOne({'phonenumber': phoneNumber}, null, function (err, userOne) {
+			
+			callback(err, userOne);
+		})
+	}
 
 	//批量查找用户 条件查找 mintimestamp最小时间戳，maxtimestamp最大时间戳，limit数量限制
 	var queryUsers = function (mintimestamp, maxtimestamp, limit, callback) {
@@ -94,12 +101,14 @@
 		})
 	}
 
-	module.exports.insert 			= insert;
-	module.exports.updata 			= updata;
-	module.exports.deletedata	 	= deletedata;
-	module.exports.queryByUserId 	= queryByUserId;
-	module.exports.queryByPhoneNum  = queryByPhoneNum;
-	module.exports.queryUsers       = queryUsers;
+	module.exports.insert 				= insert;
+	module.exports.updata 				= updata;
+	module.exports.deletedata	 		= deletedata;
+	module.exports.queryByUserId 		= queryByUserId;
+	module.exports.queryByPhoneNum  	= queryByPhoneNum;
+	module.exports.queryUsers       	= queryUsers;
+	module.exports.queryUserByPhoneNum  = queryUserByPhoneNum;
+
 
 
 
