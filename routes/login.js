@@ -11,7 +11,6 @@ var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 router.post('/', urlencodedParser, function (req, res) {
-	console.log('hello post');
 	var codeV = 0;
 	var msgV = 'error';
 
