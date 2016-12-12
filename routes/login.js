@@ -18,7 +18,7 @@ router.post('/', urlencodedParser, function (req, res) {
 	var sign = req.body.sign;
 	var passWord = req.body.password;
 	
-	//验证码还未添加，暂时使用123456
+	
 	if (checkPhone(phoneNumber) && passWord.length <= 20 && passWord.length >= 6) {
 		var md5Valve = utility.md5(phoneNumber + 'crocodile' + '!@#$%^&*');
 		if (md5Valve == sign) {
