@@ -11,4 +11,8 @@ module.exports = function (app) {
 	app.use('/register', require('./register'));	
 	app.use('/login', require('./login'));
 	app.use('/qrcode', require('../bin/qrcode'));
+	app.use('/download', require('../bin/download'));
+	app.use('/showimage', require('../bin/showimage'));
+
 };
+
